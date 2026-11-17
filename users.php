@@ -73,7 +73,7 @@ include __DIR__ . "/includes/sidebar.php";
     <div class="toolbar">
         <div>
             <h2>Manajemen Pengguna</h2>
-            <p class="muted">Kelola akun administrator, kader posyandu, dan orang tua sasaran.</p>
+            <p class="muted">Kelola akun administrator dan kader posyandu.</p>
         </div>
     </div>
 
@@ -138,7 +138,7 @@ include __DIR__ . "/includes/sidebar.php";
             <h3 style="margin-top:0; font-size:15px; font-weight:700; color:var(--ink);">
                 Tambah Pengguna Baru
             </h3>
-            <p class="muted" style="font-size:12px; margin-bottom:16px;">Buat akun untuk kader posyandu atau orang tua.</p>
+            <p class="muted" style="font-size:12px; margin-bottom:16px;">Buat akun untuk kader posyandu atau admin.</p>
 
             <form method="POST">
                 <input type="hidden" name="action" value="tambah">
@@ -157,7 +157,6 @@ include __DIR__ . "/includes/sidebar.php";
                     <label for="usr_role">Hak Akses (Role) <span style="color:var(--danger);">*</span></label>
                     <select id="usr_role" name="role" class="form-control" required>
                         <option value="petugas">Petugas / Kader Posyandu</option>
-                        <option value="orang_tua">Orang Tua Balita</option>
                         <option value="admin">Administrator Sistem</option>
                     </select>
                 </div>

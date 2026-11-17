@@ -48,8 +48,6 @@ function current_warga(): array {
 }
 
 function require_warga_or_user(): void {
-    if (empty($_SESSION['user']) && empty($_SESSION['warga'])) {
-        header("Location: login.php");
-        exit;
-    }
+    // Halaman warga bersifat publik untuk orang tua/warga tanpa perlu login
+    return;
 }

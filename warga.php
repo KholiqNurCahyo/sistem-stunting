@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . "/includes/auth.php";
-require_warga_or_user();
+// Warga / orang tua dapat mengakses halaman ini secara publik tanpa perlu login
 require_once __DIR__ . "/config/database.php";
 require_once __DIR__ . "/includes/antropometri.php";
 require_once __DIR__ . "/includes/icons.php";
@@ -102,10 +102,14 @@ $today = date('Y-m-d');
                 <a href="index.php" class="btn btn-secondary btn-sm">
                     <?= ui_icon('dashboard', '', 14) ?> Dashboard Petugas
                 </a>
+                <a href="logout.php" class="btn btn-outline btn-sm">
+                    <?= ui_icon('logout', '', 14) ?> Keluar
+                </a>
+            <?php else: ?>
+                <a href="login.php" class="btn btn-outline btn-sm">
+                    <?= ui_icon('shield', '', 14) ?> Login Petugas
+                </a>
             <?php endif; ?>
-            <a href="logout.php" class="btn btn-outline btn-sm">
-                <?= ui_icon('logout', '', 14) ?> Keluar / Ganti Balita
-            </a>
         </div>
     </header>
 
